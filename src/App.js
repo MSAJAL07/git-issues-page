@@ -7,23 +7,22 @@ import Nav from './components/nav';
 
 const otherValues = ['Auther', 'Label', 'Projects', 'Milestones', 'Assignee', 'Sort'];
 
-
 function App() {
   const [issuesData, setIssues] = useState([])
   const [loading, setLoading] = useState(false)
-  const [pageNumber, setPageNumber] = useState(0)
+  const [pageNumber, setPageNumber] = useState(1)
 
 
-  const fetchData = async (page = 0) => {
+  const fetchData = async (page = 1) => {
     setLoading(true)
     const issues = await axios(`https://api.github.com/repos/facebook/react/issues?page=${page}`)
     console.log("issues :", issues);
     setIssues([...issuesData, ...issues.data])
     setLoading(false)
   }
+
   const observer = useRef()
   const lastIssueRef = useCallback((node) => {
-    console.log("cahala")
     if (loading) return;
     if (observer.current) observer.current.disconnect()
     observer.current = new IntersectionObserver(entries => {
@@ -35,10 +34,13 @@ function App() {
       rootMargin: '500px',
     })
     if (node) observer.current.observe(node)
-
+    // eslint-disable-next-line
   }, [loading])
+
+
   useEffect(() => {
     fetchData()
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -52,13 +54,13 @@ function App() {
             <div className='OpenClosedIssueDetails'>
               <a className='OpenClosedIssueAnchor'
                 selected
-                href="#"
+                href="/"
               >
                 253 Open
               </a>
               <a className='OpenClosedIssueAnchor'
                 style={{ marginLeft: '10px' }}
-                href='#'
+                href='/'
               >
 
                 6378 closed
@@ -76,7 +78,7 @@ function App() {
           {
             issuesData && issuesData.map((data, index) => {
               return (
-                issuesData.length == index + 1 ?
+                issuesData.length === index + 1 ?
                   <Issues ref={lastIssueRef} key={index} data={data} /> :
                   <Issues key={index} data={data} />
               )

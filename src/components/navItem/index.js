@@ -23,10 +23,7 @@ const NavigationItemWrapper = styled.div`
     &:hover {
      color : #000;
     }
-    @media (${props => props.name != "Code" && props.name != "Issues"}) and (max-width: 400px) {
 
-        display: none;
-}
   `;
 
 const NavigationItemAnchor = styled.a`
@@ -51,7 +48,7 @@ const NavigationItem = ({
     name, selected, value, url,
 }) => (
 
-    < NavigationItemWrapper name={name} selected={selected} className={`${(name != "Code" && name != "Issues") ? "hide" : ""}`}>
+    < NavigationItemWrapper name={name} selected={selected} className={`${(name !== "Code" && name !== "Issues") ? "hide" : ""}`}>
         {name === 'Code' && <CodeSVG />}
         {name === 'Issues' && <IssueOpenedSVG selected />}
         {name === 'Pull Requests' && <PrSVG />}
