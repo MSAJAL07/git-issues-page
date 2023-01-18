@@ -54,13 +54,13 @@ function App() {
             <div className='OpenClosedIssueDetails'>
               <a className='OpenClosedIssueAnchor'
                 selected
-                href="/"
+                href="#"
               >
                 253 Open
               </a>
               <a className='OpenClosedIssueAnchor'
                 style={{ marginLeft: '10px' }}
-                href='/'
+                href='#'
               >
 
                 6378 closed
