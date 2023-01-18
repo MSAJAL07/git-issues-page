@@ -1,15 +1,13 @@
 {
   "files": {
     "main.css": "/git-issues-page/static/css/main.cde2ca1f.css",
-    "main.js": "/git-issues-page/static/js/main.bfadf1a6.js",
-    "static/js/787.b5840cfb.chunk.js": "/git-issues-page/static/js/787.b5840cfb.chunk.js",
+    "main.js": "/git-issues-page/static/js/main.d72bd276.js",
     "index.html": "/git-issues-page/index.html",
     "main.cde2ca1f.css.map": "/git-issues-page/static/css/main.cde2ca1f.css.map",
-    "main.bfadf1a6.js.map": "/git-issues-page/static/js/main.bfadf1a6.js.map",
-    "787.b5840cfb.chunk.js.map": "/git-issues-page/static/js/787.b5840cfb.chunk.js.map"
+    "main.d72bd276.js.map": "/git-issues-page/static/js/main.d72bd276.js.map"
   },
   "entrypoints": [
     "static/css/main.cde2ca1f.css",
-    "static/js/main.bfadf1a6.js"
+    "static/js/main.d72bd276.js"
   ]
 }
