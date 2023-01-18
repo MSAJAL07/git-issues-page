@@ -1,0 +1,68 @@
+
+.IssueWrapper{
+    border :  1px solid #e1e4e8;
+   background-color : #fff;
+   font-size:16px;
+   display : flex;
+   flex-direction : column;
+
+
+}
+.IssueWrapper:hover {
+     background-color : #f6f8fa;
+   }
+
+.IssueAnchorNTitleWrapper{
+  display : flex;
+  flex-direction : row;
+  align-items: baseline;
+  padding-top: 2px;
+}
+.IssueOpenedIconWrapper{
+  padding : 8px 0px 0px 16px;
+  display: inline-block;
+}
+
+.octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+}
+
+.open.octicon {
+    color: #3fb950;
+}
+
+.IssueAnchorWithLabel{
+    width : 75%;
+}
+.IssueAnchor{
+   font-weight: 550;
+   color:#24292e;
+   display: inline-block;
+   font-size : 16px;
+   padding-left: 4px;
+   word-break: break-word;
+   text-decoration: none;
+}
+.IssueAnchor:hover {
+     color : #0366d6;
+     text-decoration : none;
+   }
+
+.IssueOpenedBy{
+   font-size : 12px;
+   color : #586069;
+   line-height: 1.25;
+   margin-top: 5px;
+   margin-left: 42px;
+   padding-bottom: 8px;
+}
+.UserAnchor{
+   text-decoration : none;
+   color : #586069;
+}
+.UserAnchor:hover{
+     color : #0366d6;
+}

@@ -1,0 +1,22 @@
+.NavigationItemWrapper{
+     border: 1px solid transparent;
+    border-radius: 3px 3px 0 0;
+    border-top: 3px solid transparent;
+    color: #24292e;
+    float: left;
+    padding: 7px 15px 8px;
+    white-space: nowrap;
+    background-color :  '#fff';
+    /* border-color : ${props => props.selected && '#e36209 #e1e4e8 transparent'}; */
+    cursor : pointer;
+}
+.NavigationItemWrapper:hover {
+     color : #000;
+}
+
+@media screen and (max-width: 500px) {
+    .hide{
+        display: none;
+    }
+
+}
